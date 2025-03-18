@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeadProject_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87d09e7593579711b529847f48d75c29d4f54343")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeadProject_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeadProject_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
