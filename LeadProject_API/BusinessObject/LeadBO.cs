@@ -1,17 +1,33 @@
-﻿namespace LeadProject_API.BusinessObject
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using static LeadProject_API.Enum.EnumLead;
+
+namespace LeadManagementAPI.Models
 {
     public class LeadBO
     {
-        public required int Id { get; set; }
-        public required string FirstName { get; set; }
-        public required string LastName { get; set; }
-        public required string Email { get; set; }
-        public required string PhoneNumber { get; set; }
-        public required string Suburb { get; set; }
-        public required string Category { get; set; }
-        public required string Description { get; set; }
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public string Email { get; set; }
+
+        public string Phone { get; set; }
+
+        public string Suburb { get; set; }
+
+        public string Category { get; set; }
+
+        public string Description { get; set; }
+
+
+        [Required]
         public decimal Price { get; set; }
-        public string Status { get; set; } = "invited";
-        public DateTime DateCreated { get; set; } = DateTime.UtcNow;
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public LeadStatus Status { get; set; } = LeadStatus.Invited;
     }
 }

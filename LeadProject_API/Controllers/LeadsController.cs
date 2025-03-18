@@ -1,48 +1,55 @@
-﻿using LeadProject_API.Context;
+﻿using LeadManagementAPI.Data;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+using static LeadProject_API.Enum.EnumLead;
 
-namespace LeadProject_API.Controllers
+namespace LeadManagementAPI.Controllers
 {
-        [ApiController]
-        [Route("api/leads")]
-        public class LeadsController : ControllerBase
+    [ApiController]
+    [Route("api/leads")]
+    public class LeadsController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+
+        public LeadsController(ApplicationDbContext context) => _context = context;
+
+        [HttpGet("{status}")]
+        public async Task<IActionResult> GetLeads(string status)
         {
-            private readonly AppDbContext _context;
+            if (!Enum.TryParse(status, true, out LeadStatus leadStatus))
+                return BadRequest("Status inválido.");
 
-            public LeadsController(AppDbContext context) => _context = context;
+            var leads = await _context.Leads
+                .Where(l => l.Status == leadStatus)
+                .ToListAsync();
 
-            [HttpGet("{status}")]
-            public async Task<IActionResult> GetLeads(string status)
-            {
-                return Ok(await _context.Leads.Where(l => l.Status == status).ToListAsync());
-            }
-
-            [HttpPost("accept/{id}")]
-            public async Task<IActionResult> AcceptLead(int id)
-            {
-                var lead = await _context.Leads.FindAsync(id);
-                if (lead == null) return NotFound();
-
-                lead.Status = "accepted";
-                if (lead.Price > 500) lead.Price *= 0.9M; // Cálculo que aplica 10% de desconto
-                await _context.SaveChangesAsync();
-
-                return Ok();
-            }
-
-            [HttpPost("decline/{id}")]
-            public async Task<IActionResult> DeclineLead(int id)
-            {
-                var lead = await _context.Leads.FindAsync(id);
-                if (lead == null) return NotFound();
-
-                lead.Status = "declined";
-                await _context.SaveChangesAsync();
-
-                return Ok();
-            }
+            return Ok(leads);
         }
 
+        [HttpPost("accept/{id}")]
+        public async Task<IActionResult> AcceptLead(int id)
+        {
+            var lead = await _context.Leads.FindAsync(id);
+            if (lead == null) return NotFound();
+
+            lead.Status = LeadStatus.Accepted;
+
+            if (lead.Price > 500) lead.Price *= 0.9M;
+
+            await _context.SaveChangesAsync();
+            return Ok(lead);
+        }
+
+        [HttpPost("decline/{id}")]
+        public async Task<IActionResult> DeclineLead(int id)
+        {
+            var lead = await _context.Leads.FindAsync(id);
+            if (lead == null) return NotFound();
+
+            lead.Status = LeadStatus.Declined;
+
+            await _context.SaveChangesAsync();
+            return Ok(lead);
+        }
     }
+}
