@@ -26,7 +26,11 @@ const LeadList = () => {
   ]);
 
   const handleAccept = (lead) => {
-    const updatedLeads = leads.map((l) => l.id === lead.id ? { ...l, status: "accepted", price: l.price > 500 ? l.price * 0.9 : l.price } : l);
+    const updatedLeads = leads.map((l) =>
+      l.id === lead.id
+        ? { ...l, status: "accepted", price: l.price > 500 ? l.price * 0.9 : l.price }
+        : l
+    );
     setLeads(updatedLeads);
     console.log(`Lead ${lead.name} aceito!`);
   };
@@ -45,7 +49,12 @@ const LeadList = () => {
       {leads
         .filter((lead) => lead.status === "invited")
         .map((lead) => (
-          <LeadCard key={lead.id} lead={lead} onAccept={handleAccept} onDecline={handleDecline} />
+          <LeadCard
+            key={lead.id}
+            lead={lead}
+            onAccept={handleAccept}
+            onDecline={handleDecline}
+          />
         ))}
     </div>
   );
