@@ -11,16 +11,12 @@
       "RelativeMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|c:\\projects\\projectlead\\leadsproject\\leadproject_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|c:\\projects\\projectlead\\leadsproject\\leadproject_api\\businessobject\\leadbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|solutionrelative:businessobject\\leadbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|c:\\projects\\projectlead\\leadsproject\\leadproject_api\\enum\\enumlead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|solutionrelative:enum\\enumlead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|c:\\projects\\projectlead\\leadsproject\\leadproject_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A550D45D-D438-4D0C-A044-94188BE0B7F9}|LeadProject_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,43 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EnumLead.cs",
-              "DocumentMoniker": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\Enum\\EnumLead.cs",
-              "RelativeDocumentMoniker": "Enum\\EnumLead.cs",
-              "ToolTip": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\Enum\\EnumLead.cs",
-              "RelativeToolTip": "Enum\\EnumLead.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T23:15:16.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "LeadBO.cs",
               "DocumentMoniker": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\BusinessObject\\LeadBO.cs",
               "RelativeDocumentMoniker": "BusinessObject\\LeadBO.cs",
               "ToolTip": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\BusinessObject\\LeadBO.cs",
               "RelativeToolTip": "BusinessObject\\LeadBO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T22:56:55.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T19:20:43.707Z",
               "EditorCaption": ""
@@ -92,7 +75,7 @@
               "RelativeDocumentMoniker": "Controllers\\LeadsController.cs",
               "ToolTip": "C:\\Projects\\ProjectLead\\LeadsProject\\LeadProject_API\\Controllers\\LeadsController.cs",
               "RelativeToolTip": "Controllers\\LeadsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T19:13:16.718Z",
               "EditorCaption": ""
